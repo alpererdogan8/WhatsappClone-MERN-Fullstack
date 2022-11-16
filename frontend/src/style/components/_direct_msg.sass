@@ -1,0 +1,57 @@
+.direct-msg-box
+  width: 100%
+  margin: 0 30px
+  padding: 0 90px
+  height: auto
+  @include flex-all($flex-direction: column)
+.direct-msg
+  min-width: 80px
+  max-width: 489px
+  height: auto
+  margin: 0 0 2px 0
+  padding: 6px 7px 8px 9px
+  background-color: $item-me
+  border-radius: 6px
+  @include flex-all($flex-direction:column)
+  align-self: flex-start
+  font-size: $font-dm-box
+  &-name
+    width: 100%
+  &-content
+    width: 100%
+    word-break: break-all
+  &-time
+    align-self: flex-end
+    font-size: $font-dm-box-time
+
+.me-msg
+  background-color: #028C6F
+  align-self: flex-end
+  &-tab
+    width: 0
+    height: 0
+    border-top-right-radius: 5px
+    border-bottom-left-radius: 6px
+    border-left: 0px solid transparent
+    border-right: 18px solid transparent
+    border-top: 18px solid $item-me
+    margin-top: -6px
+    margin-right: -18px
+    margin-bottom: -8px
+    align-self: flex-end
+
+.friend-msg
+  background-color: #283841
+  align-self: flex-start
+  &-tab
+    width: 0
+    height: 0
+    border-top-left-radius: 5px
+    border-bottom-right-radius: 6px
+    border-right: 0px solid transparent
+    border-left: 18px solid transparent
+    border-top: 18px solid #283841
+    margin-top: -6px
+    margin-left: -23px
+    margin-bottom: -8px
+    align-self: flex-start
