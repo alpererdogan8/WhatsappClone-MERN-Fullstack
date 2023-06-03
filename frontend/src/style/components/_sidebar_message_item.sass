@@ -1,0 +1,89 @@
+.sidebar-item-msg-group
+  width: 100%
+  @include flex-all($flex-direction: column,$justify-content: flex-start)
+  height: 100vh
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    width: 5px
+    background: $sidebar-item
+  &::-webkit-scrollbar-thumb
+    background: $border-color
+  &::-webkit-scrollbar-thumb:hover
+    background: $child-text
+
+.sidebar-item
+  width: 100%
+  height: 72px
+  @include flex-all($justify-content: flex-start,$flex-direction: row,$align-items: center)
+  background-color: $sidebar-item
+  &:hover
+    background-color: $sidebar
+    cursor: pointer
+  .profile-picture
+    width: pxToRem(77)
+    height: pxToRem(72)
+    @include flex-all
+    margin-top: -1px
+    padding: 0px 15px 0 13px
+    .picture
+      width: pxToRem(49)
+      height: pxToRem(49)
+      svg
+        width: inherit
+        height: inherit
+        border-radius: pxToRem(49)
+
+.message-article
+  width: 100%
+  height: 72px
+  @include flex-all($justify-content: center,$flex-direction: column,$align-items: center)
+  padding-right: 10px
+  margin-top: 1px
+  border-bottom: solid 2px $sidebar
+.message-info
+  width: 100%
+  @include flex-all($justify-content:space-between,$flex-direction: row)
+.message-name
+  height: 22px
+  font-size: $sidebar-item-header-text
+  font-weight: $font-time-weight-regular
+.message-time
+  margin-bottom: 4px
+  font-size: $font-time-size
+.message-input
+  form
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  input
+    color: $white
+    border: none
+    border-color: $green
+    border-radius: 10px
+    background-color: $border-color
+    margin-top: -8px
+    width: 100%
+    padding: 10px
+  &--button
+    position: absolute
+    display: flex
+    padding: 10px
+    justify-content: center
+    align-items: center
+    background-color: rgba(156, 26, 26, 0)
+    border: none
+    border-radius: 999px
+    margin-bottom: 5px
+    svg
+      width: 20px
+      path
+        &:hover
+          fill: $green
+          cursor: pointer
+
+.message-content
+  width: 100%
+  margin-top: 2px
+  font-size: $font-sidebar-child-text
+  font-weight: $font-time-weight-regular
+  @include flex-all($justify-content:flex-start)

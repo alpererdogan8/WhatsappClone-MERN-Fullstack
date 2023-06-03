@@ -1,0 +1,85 @@
+.main-bottom
+  // Şu kısmı düzenlemelisin
+  width: 100%
+  height: auto
+  background-color: $sidebar
+  @include flex-all($justify-content:space-between, $align-items: flex-end)
+  margin-left: -1.5px
+  margin-top: 0.8px
+  &-button-group
+    width: 94px
+    height: 52px
+    padding: 5px 10px
+    @include flex-all
+    button
+      border: none
+      background-color: unset
+    &--emoji
+      margin-top: 2px
+      margin-left: 23px
+      svg
+        width: 26px
+        height: 26px
+        path
+          fill: $child-text
+    &--attach
+      padding: 8px
+      margin-left: -4px
+      margin-top: 2px
+      svg
+        width: 24px
+        height: 24px
+        path
+          fill: $child-text
+
+  &-textbox
+    width: 100%
+    min-height: 4px
+    max-height: 200px
+    padding: 9px 8px
+    display: flex
+    justify-content: flex-end
+    textarea
+      height: 100%
+      min-height: 40px
+      max-height: 180px
+      resize: none
+      width: 100%
+      // min-width: 200px
+      overflow-y: auto
+      background-color: rgba(134,150,160,0.15)
+      border-radius: 6px
+      outline: none
+      border: none
+      padding-top: 9px
+      padding-left: 20px
+      color: $white
+      font-family: inherit
+      font-size: 15px
+      &::placeholder
+        color: $child-text
+      &::-webkit-scrollbar
+        width: 5px
+        background: $sidebar
+      &::-webkit-scrollbar-thumb
+        background: $child-text
+      &::-webkit-scrollbar-thumb:hover
+        background: $child-text
+  &--mic
+    @include flex-all($justify-content:flex-start)
+    width: 40px
+    height: 55px
+    margin-top: 2px
+    margin-right: 14px
+    button
+      border: none
+      background-color: unset
+      width: 40px
+      height: 40px
+      &:hover
+        cursor: pointer
+    svg
+      width: 24px
+      height: 24px
+      path
+        fill: $child-text

@@ -1,0 +1,57 @@
+.toast
+  margin: auto
+  left: 0
+  right: 0
+  bottom: 0
+  position: absolute
+  display: flex
+  justify-content: flex-start
+  align-items: centers
+  z-index: 999
+  background-color: $toast-bg
+  padding: 20px 20px
+  width: 280px
+
+  opacity: 0
+  &--animation
+    animation: moveUp 2.5s backwards
+  &--success
+    color: $item-me
+    border-radius: 10px
+    border: solid $item-me 2px
+  &--error
+    color: $toast-error
+    border-radius: 10px
+    border: solid $toast-error 2px
+
+  @keyframes moveUp
+    0%
+      opacity: 0
+      display: none
+      transform: translateY(10%)
+
+    30%
+      opacity: 1
+      display: flex
+      transform: translateY(-30%)
+    70%
+      opacity: 1
+      display: flex
+      transform: translateY(-30%)
+
+    100%
+      opacity: 0
+      display: none
+      transform: translateY(10%)
+
+  &-icon
+
+    svg
+      stroke-width: 3px
+
+  &-text
+
+    font-weight: 500
+    flex-grow: 1
+    display: flex
+    justify-content: center

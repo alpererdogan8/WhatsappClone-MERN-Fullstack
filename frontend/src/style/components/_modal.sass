@@ -1,0 +1,69 @@
+.modal
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background-color: rgba(153, 153, 153, 0.596)
+  z-index: 60
+  @include flex-all
+  span
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 60
+  &-card
+    position: absolute
+    z-index: 62
+    width: 380px
+    height: 380px
+    @include flex-all($flex-direction:column,  $justify-content:flex-start)
+    border-radius: 10px
+
+    padding: 20px 0
+    color: #white
+    @include colorType($state:background,$color:$wp-main-background)
+    form
+      @include flex-all($flex-direction:column, $justify-content:between)
+      width: 100%
+      margin-top: 30px
+
+      input
+        width: 70%
+        height: 40px
+        margin: 15px 0
+        border: none
+        border-radius: 3px
+        border-bottom: solid 3px $child-text
+        @include colorType($state:background,$color:$border-color)
+        @include colorType($state:color,$color:$white)
+        @include fontProp(15,200)
+        padding-left: 20px
+        outline: none
+        &::-webkit-input-placeholder
+          @include colorType($state:color,$color:$white)
+
+        &:hover
+          border-bottom: solid 3px $green
+        &:focus
+          border-bottom: solid 3px $green
+      input[type="submit"]
+        padding-left: 0
+        background-color: $green
+        border: none
+        &:hover
+          cursor: pointer
+          background-color: $item-me
+    div
+      cursor: pointer
+      padding-left: 0
+      @include fontProp(15,100)
+      text-decoration: underline
+      color: $green
+      &:hover
+        color: $item-me
+    &--h2
+      @include fontProp(30,400)
+      margin-top: 30px

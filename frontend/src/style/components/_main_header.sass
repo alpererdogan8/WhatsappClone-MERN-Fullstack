@@ -1,0 +1,52 @@
+//  Main Sass
+
+.main-top
+  width: 100%
+  height: 60px
+  @include flex-all($justify-content:space-between)
+  background-color: $sidebar
+  padding: 16px 10px
+  &-profile-picture
+    margin-top: -2px
+    padding-left: 7px
+    width: 40px
+    height: 40px
+    svg
+      width: 40px
+      height: 40px
+  &-profile-info
+    padding-left: 22px
+    width: 100%
+    margin-top: 5px
+    .title
+      margin-top: -8px
+      font-size: $font-main-header
+      font-weight: $font-time-weight-semibold
+    .title-info
+      margin-top: 5px
+      font-size: $font-time-size
+      font-weight: $font-time-weight-regular
+  &-button-group
+    width: pxToRem(80)
+    height: pxToRem(40)
+    @include flex-all
+    margin-left: 20px
+  &--search
+    width: 40px
+    height: 40px
+
+    @include flex-all($justify-content:flex-start)
+    svg
+      margin-left: 1.6px
+      fill: $white
+      width: 24px
+      height: 24px
+  &--settings
+    width: 40px
+    height: 40px
+    @include flex-all($justify-content:flex-start)
+    svg
+      margin-left: 1.6px
+      fill: $white
+      width: 24px
+      height: 24px

@@ -1,0 +1,23 @@
+@mixin colorType($state,$color)
+  @if $state == background
+    #{$state}-color: $color
+  @else if $state == color
+    #{$state}: $color
+  @else
+    @error "Unknown Type"
+
+@mixin fontProp($sizeRem,$weight)
+  font-size: pxToRem($sizeRem)
+  font-weight: $weight
+  @content
+
+@mixin for-size($size)
+  @if $size ==  tight-screen
+    @media (max-width: 747px)
+      @content
+
+@mixin flex-all($justify-content: center,$align-items: center,$flex-direction: row)
+  display: flex
+  flex-direction: $flex-direction
+  justify-content: $justify-content
+  align-items: $align-items

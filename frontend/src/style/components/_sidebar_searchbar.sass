@@ -1,0 +1,51 @@
+.sidebar-search
+  // min-width: 411px
+  // max-width: 1120px
+  width: 100%
+  height: 47px
+  @include flex-all()
+  background-color: $sidebar-item
+  text-align: end
+  padding-left: 12px
+  & button
+    width: 26px
+    height: 26px
+    margin: 0 8px
+    background-color: unset
+    border: none
+    text-align: center
+    padding: 0
+    & svg
+      margin-top: 1px
+      width: 20px
+      height: 20px
+
+.search-input
+  width: 100%
+  background-color: $sidebar
+  height: 35px
+  border-radius: 8px
+  @include flex-all(space-between)
+  button
+    width: pxToRem(24)
+    height: pxToRem(24)
+    margin-left: 12px
+    svg
+      width: pxToRem(18)
+      height: pxToRem(18)
+      fill: $child-text
+  input
+    width: 80%
+    margin-right: 10px
+    font-size: pxToRem(15)
+    color: $white
+    outline: none
+    line-height: 20px
+    border: none
+    background-color: unset
+    &::placeholder
+      color: $child-text
+      font-size: pxToRem(15) !important
+    &::-webkit-input-placeholder
+      color: $child-text
+      font-size: pxToRem(15) !important

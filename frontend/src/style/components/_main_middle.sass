@@ -1,0 +1,17 @@
+.main-middle-layout
+  width: 100%
+  height: 100vh
+  background-image: $background-image
+  background-color: $wp-main-background
+  background-position: center
+  @include flex-all($flex-direction: column, $justify-content: flex-start, $align-items: center)
+  overflow-x: hidden
+  overflow-y: auto
+
+  &::-webkit-scrollbar
+    width: 5px
+    background: $sidebar-item
+  &::-webkit-scrollbar-thumb
+    background: $border-color
+  &::-webkit-scrollbar-thumb:hover
+    background: $child-text
